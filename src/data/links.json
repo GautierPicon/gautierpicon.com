@@ -1,21 +1,15 @@
 [
   {
-    "name": "My Portfolio",
-    "url": "/",
-    "icon": "portfolio.webp",
-    "description": "In fact, you're already on it 😉"
+    "name": "Twitter (currently X)",
+    "url": "https://x.com/vu_zip",
+    "icon": "twitter.png",
+    "description": "DM me, i'm active there"
   },
   {
     "name": "GitHub",
     "url": "https://github.com/GautierPicon",
     "icon": "github.webp",
     "description": "Check out my code and projects"
-  },
-  {
-    "name": "Twitter (currently X)",
-    "url": "https://x.com/vu_zip",
-    "icon": "twitter.png",
-    "description": "DM me, i'm active there"
   },
   {
     "name": "Signal",
