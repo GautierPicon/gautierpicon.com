@@ -18,4 +18,4 @@ Feedback are welcome! Feel free to open an [issue](https://github.com/GautierPic
 ## Privacy
 
 This site respects users and their data. The data collected **anonymously**, **independently**, and **without cookies or personal data** through [Vercel Analytics](https://vercel.com/docs/analytics) are: your country, your operating system and web browser, your referrer and the pages visited.
-If this data collection bothers you, feel free to use an [ad blocker](https://en.wikipedia.org/wiki/Ad_blocking) (such as [uBlock](https://ublockorigin.com/fr)) that blocks trackers.
+If this data collection bothers you, feel free to use an [ad blocker](https://en.wikipedia.org/wiki/Ad_blocking) (such as uBlock) that blocks trackers.
