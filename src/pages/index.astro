@@ -1,61 +1,71 @@
 ---
 const pageTitle = "Gautier Picon's Portfolio";
 
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import LinkButton from "../components/LinkButton.svelte";
-import links from "../data/links.json";
+import LinkButton from '../components/LinkButton.svelte';
+import links from '../data/links.json';
 
-import walkingDuck from "../assets/walkingDuck.gif";
+import walkingDuck from '../assets/walkingDuck.gif';
 
 // improve logo import
-import portfolioIcon from "../assets/linksIcons/portfolio.webp";
-import githubIcon from "../assets/linksIcons/github.webp";
-import twitterIcon from "../assets/linksIcons/twitter.webp";
-import signalIcon from "../assets/linksIcons/signal.webp";
-import emailIcon from "../assets/linksIcons/email.webp";
+import portfolioIcon from '../assets/linksIcons/portfolio.webp';
+import githubIcon from '../assets/linksIcons/github.webp';
+import twitterIcon from '../assets/linksIcons/twitter.webp';
+import signalIcon from '../assets/linksIcons/signal.webp';
+import emailIcon from '../assets/linksIcons/email.webp';
 
 const iconMap: Record<string, any> = {
-  "portfolio.webp": portfolioIcon,
-  "github.webp": githubIcon,
-  "twitter.webp": twitterIcon,
-  "signal.webp": signalIcon,
-  "email.webp": emailIcon,
+  'portfolio.webp': portfolioIcon,
+  'github.webp': githubIcon,
+  'twitter.webp': twitterIcon,
+  'signal.webp': signalIcon,
+  'email.webp': emailIcon
 };
 //
 ---
 
 <Layout title={pageTitle}>
-  <main class="bg-white h-screen overflow-hidden flex items-center justify-center py-5 px-5 box-border">
+  <main
+    class="bg-white h-screen overflow-hidden flex items-center justify-center py-5 px-5 box-border"
+  >
     <div class="flex flex-col items-center w-full max-w-[492px]">
-      <div class="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[184px] md:h-[184px] rounded-[20px] overflow-hidden mb-4 sm:mb-6">
+      <div
+        class="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[184px] md:h-[184px] rounded-[20px] overflow-hidden mb-4 sm:mb-6"
+      >
         <Image
           src={walkingDuck}
           alt="walkingDuck"
           class="w-[109.38%] h-[109.38%] object-cover -translate-x-[4.59%] translate-y-[0.12%]"
-		  loading="eager"
+          loading="eager"
         />
       </div>
 
-      <h1 class="uppercase font-bold text-[18px] sm:text-[20px] md:text-[36px] tracking-wider text-black text-center mb-2 whitespace-nowrap">
+      <h1
+        class="uppercase font-bold text-[18px] sm:text-[20px] md:text-[36px] tracking-wider text-black text-center mb-2 whitespace-nowrap"
+      >
         Gautier Picon
       </h1>
 
-      <p class="font-normal text-[14px] sm:text-[16px] md:text-[20px] text-center text-black leading-tight max-w-[260px] sm:max-w-[280px] mb-6 sm:mb-10">
+      <p
+        class="font-normal text-[14px] sm:text-[16px] md:text-[20px] text-center text-black leading-tight max-w-[260px] sm:max-w-[280px] mb-6 sm:mb-10"
+      >
         I’m passionate about AI, but I’ll always be on the artists’ side 🙂‍↕️
       </p>
 
       <ul class="w-full flex flex-col gap-3 sm:gap-4 md:gap-6">
-        {links.map((link) => (
-          <li>
-            <LinkButton 
-              title={link.name} 
-              subtitle={link.description} 
-              href={link.url} 
-              icon={iconMap[link.icon].src}
-            />
-          </li>
-        ))}
+        {
+          links.map((link) => (
+            <li>
+              <LinkButton
+                title={link.name}
+                subtitle={link.description}
+                href={link.url}
+                icon={iconMap[link.icon].src}
+              />
+            </li>
+          ))
+        }
       </ul>
     </div>
   </main>
