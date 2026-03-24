@@ -29,8 +29,10 @@ const links = linksData.map((link) => ({
     class="bg-white h-screen overflow-hidden flex items-center justify-center py-5 px-5 box-border"
   >
     <div class="flex flex-col items-center w-full max-w-[492px]">
-      <div
-        class="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[184px] md:h-[184px] rounded-[20px] overflow-hidden mb-4 sm:mb-6"
+      <button
+        id="duck-btn"
+        class="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[184px] md:h-[184px] rounded-[20px] overflow-hidden mb-4 sm:mb-6 border-none p-0 bg-transparent"
+        aria-label="Quack!"
       >
         <Image
           src={walkingDuck}
@@ -38,7 +40,7 @@ const links = linksData.map((link) => ({
           class="w-[109.38%] h-[109.38%] object-cover -translate-x-[4.59%] translate-y-[0.12%]"
           loading="eager"
         />
-      </div>
+      </button>
 
       <h1
         class="uppercase font-bold text-[18px] sm:text-[20px] md:text-[36px] tracking-wider text-black text-center mb-2 whitespace-nowrap"
@@ -81,3 +83,12 @@ const links = linksData.map((link) => ({
     </div>
   </main>
 </Layout>
+
+<script>
+  const quack = new Audio('/quack.mp3');
+
+  document.getElementById('duck-btn')?.addEventListener('click', () => {
+    quack.currentTime = 0;
+    quack.play();
+  });
+</script>
