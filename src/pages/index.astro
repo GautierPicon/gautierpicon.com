@@ -2,27 +2,26 @@
 const pageTitle = "Gautier Picon's Portfolio";
 
 import Layout from '../layouts/Layout.astro';
+import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 import LinkButton from '../components/LinkButton.svelte';
-import links from '../data/links.json';
-
+import linksData from '../data/links.json';
 import walkingDuck from '../assets/walkingDuck.gif';
 
-// improve logo import
-import portfolioIcon from '../assets/linksIcons/portfolio.webp';
-import githubIcon from '../assets/linksIcons/github.webp';
-import twitterIcon from '../assets/linksIcons/twitter.png';
-import signalIcon from '../assets/linksIcons/signal.webp';
-import emailIcon from '../assets/linksIcons/email.webp';
+const iconModules = import.meta.glob<{ default: ImageMetadata }>('../assets/linksIcons/*', {
+  eager: true
+});
 
-const iconMap: Record<string, any> = {
-  'portfolio.webp': portfolioIcon,
-  'github.webp': githubIcon,
-  'twitter.png': twitterIcon,
-  'signal.webp': signalIcon,
-  'email.webp': emailIcon
-};
-//
+const iconMap: Record<string, ImageMetadata> = {};
+for (const [path, module] of Object.entries(iconModules)) {
+  const filename = path.split('/').pop();
+  if (filename) iconMap[filename] = module.default;
+}
+
+const links = linksData.map((link) => ({
+  ...link,
+  iconSrc: iconMap[link.icon]
+}));
 ---
 
 <Layout title={pageTitle}>
@@ -61,7 +60,7 @@ const iconMap: Record<string, any> = {
                 title={link.name}
                 subtitle={link.description}
                 href={link.url}
-                icon={iconMap[link.icon].src}
+                icon={link.iconSrc.src}
               />
             </li>
           ))
