@@ -7,7 +7,7 @@
 
 <a
   {href}
-  class="flex items-center bg-[#ebebeb] rounded-[40px] md:rounded-[100px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.25)] md:shadow-[0px_3px_2px_0px_rgba(0,0,0,0.25)] h-[50px] sm:h-[59px] md:h-[69px] px-[6px] gap-3 md:gap-4 md:pl-3 hover:brightness-95 transition-all"
+  class="flex items-center bg-[#ebebeb] rounded-[40px] md:rounded-[100px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.25)] md:shadow-[0px_3px_2px_0px_rgba(0,0,0,0.25)] h-[50px] sm:h-[59px] md:h-[69px] px-[6px] gap-3 md:gap-4 pl-2 md:pl-3 hover:brightness-95 transition-all"
 >
   <div
     class="rounded-md shrink-0 w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[45px] md:h-[45px] overflow-hidden"
