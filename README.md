@@ -1,4 +1,4 @@
-[![header](.github/readme-header.png)](https://GautierPicon.com)
+[![header](.github/readmeHeader.png)](https://GautierPicon.com)
 
 # My Portfolio [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
