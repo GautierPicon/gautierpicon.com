@@ -9,7 +9,7 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description = '', ogImage = '/opengraph.png' } = Astro.props;
+const { title, description = "Gautier Picon's Portfolio", ogImage = '/opengraph.png' } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
