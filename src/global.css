@@ -1,1 +1,20 @@
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'Funnel Sans';
+  src: url('/Funnel Sans/FunnelSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Funnel Sans';
+  src: url('/Funnel Sans/FunnelSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Funnel Sans', sans-serif;
+}
