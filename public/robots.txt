@@ -28,5 +28,5 @@ User-agent: *
 Disallow: /
 
 # Shared assets
-Allow: /og-image.png
+Allow: /opengraph.png
 Allow: /favicons/
