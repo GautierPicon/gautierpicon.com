@@ -2,9 +2,11 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
-    
+
     schedule:
       interval: "monthly"
+
+    versioning-strategy: increase
 
     groups:
       dependencies:
