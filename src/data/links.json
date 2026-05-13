@@ -3,7 +3,7 @@
     "name": "Twitter (currently 𝕏)",
     "url": "https://twitter.com/vu_zip",
     "icon": "twitter.png",
-    "description": "DM me, I'm active there"
+    "description": "Feel free to dm me, I'm active there"
   },
   {
     "name": "GitHub",
@@ -21,12 +21,12 @@
     "name": "Signal",
     "url": "https://signal.me/#eu/X7HYz7vkV-PHNHZv-rZQCFvZMgPBI7-WJp3B7V72uiZWDbRqVoFK95mYAhR2TkCK",
     "icon": "signal.webp",
-    "description": "Message me on Signal"
+    "description": "Message me on Signal, other apps are sh*t"
   },
   {
     "name": "Email",
     "url": "mailto:o8qelbdv@anonaddy.me",
     "icon": "email.webp",
-    "description": "Send me an email"
+    "description": "Send me an email if you'd prefer "
   }
 ]
