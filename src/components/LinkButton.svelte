@@ -7,21 +7,47 @@
 
 <a
   {href}
-  class="flex items-center bg-[#ebebeb] rounded-[40px] md:rounded-[100px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.25)] md:shadow-[0px_3px_2px_0px_rgba(0,0,0,0.25)] h-[50px] sm:h-[59px] md:h-[69px] px-[6px] gap-3 md:gap-4 pl-2 md:pl-3 hover:brightness-95 transition-all"
   target="_blank"
+  rel="noopener noreferrer"
+  class="flex items-center justify-between w-full h-[54px] sm:h-[62px] md:h-[68px] px-4 bg-zinc-50 border border-zinc-200/60 rounded-full transition-all duration-200 hover:bg-[#111111] hover:border-[#111111] group"
 >
-  <div
-    class="rounded-md shrink-0 w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[45px] md:h-[45px] overflow-hidden"
-  >
-    <img src={icon} alt="" class="w-full h-full object-cover" />
+  <div class="flex items-center gap-3.5 grow min-w-0">
+    {#if icon}
+      <div
+        class="rounded-xs shrink-0 w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[44px] md:h-[44px] overflow-hidden flex items-center justify-center p-0.5 group-hover:border-zinc-800 transition-colors"
+      >
+        <img src={icon} alt="" class="w-full h-full object-contain" />
+      </div>
+    {/if}
+
+    <div class="flex flex-col text-left leading-tight truncate">
+      <span
+        class="font-medium text-[14px] sm:text-[15px] text-[#111111] group-hover:text-white transition-colors duration-150 truncate"
+      >
+        {title}
+      </span>
+      {#if subtitle}
+        <span
+          class="font-normal text-[11.5px] sm:text-[12px] text-zinc-400 group-hover:text-zinc-400 transition-colors duration-150 mt-0.5 truncate"
+        >
+          {subtitle}
+        </span>
+      {/if}
+    </div>
   </div>
 
-  <div class="flex flex-col leading-normal">
-    <span class="font-bold text-[16px] sm:text-[20px] md:text-[24px] text-black">
-      {title}
-    </span>
-    <span class="font-normal text-[12px] sm:text-[12px] md:text-[16px] text-black">
-      {subtitle}
-    </span>
-  </div>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-3.5 w-3.5 text-zinc-400 group-hover:text-white transition-colors duration-150 shrink-0 ml-2"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2.5"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+    />
+  </svg>
 </a>
