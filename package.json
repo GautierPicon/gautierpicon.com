@@ -14,11 +14,11 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/svelte": "^8.1.0",
+    "@astrojs/svelte": "^8.1.2",
     "@tailwindcss/vite": "^4.2.4",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "astro": "^6.2.1",
+    "astro": "^6.4.2",
     "gsap": "^3.15.0",
     "svelte": "^5.55.5",
     "tailwindcss": "^4.2.4"
