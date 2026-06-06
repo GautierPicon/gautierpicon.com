@@ -26,17 +26,18 @@ const links = linksData.map((link) => ({
 
 <Layout title={pageTitle}>
   <main
-    class="bg-white h-screen overflow-hidden flex items-center justify-center md:p-5 px-8 py-5 box-border"
+    class="bg-white min-h-screen overflow-y-auto flex items-center justify-center md:p-5 px-8 py-8 box-border"
   >
     <div class="flex flex-col items-center w-full max-w-[492px]">
       <button
         id="duck-btn"
-        class="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[184px] md:h-[184px] rounded-[20px] overflow-hidden mb-4 sm:mb-6 border-none p-0 bg-transparent"
+        type="button"
+        class="cursor-pointer w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[184px] md:h-[184px] rounded-[20px] overflow-hidden mb-4 sm:mb-6 border-none p-0 bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
         aria-label="Quack!"
       >
         <Image
           src={walkingDuck}
-          alt="walkingDuck"
+          alt="Walking duck"
           class="w-full h-full object-cover"
           loading="eager"
         />
@@ -51,23 +52,25 @@ const links = linksData.map((link) => ({
       <p
         class="font-normal text-[14px] sm:text-[16px] md:text-[20px] text-center text-black leading-tight max-w-[260px] sm:max-w-[280px] mb-6 sm:mb-10"
       >
-        I’m passionate about AI, but I’ll always be on the artists’ side 🙂‍↕️
+        I'm passionate about AI, but I'll always be on the artists' side 🙂‍↕️
       </p>
 
-      <ul class="w-full flex flex-col gap-3 sm:gap-4 md:gap-6">
-        {
-          links.map((link) => (
-            <li>
-              <LinkButton
-                title={link.name}
-                subtitle={link.description}
-                href={link.url}
-                icon={link.iconSrc.src}
-              />
-            </li>
-          ))
-        }
-      </ul>
+      <nav aria-label="Social links" class="w-full">
+        <ul class="flex flex-col gap-3 sm:gap-4 md:gap-6 list-none m-0 p-0">
+          {
+            links.map((link) => (
+              <li>
+                <LinkButton
+                  title={link.name}
+                  subtitle={link.description}
+                  href={link.url}
+                  icon={link.iconSrc.src}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
 
       <p class="text-xs text-gray-400 mt-4 sm:mt-6">
         Please read this before messaging:
@@ -75,7 +78,7 @@ const links = linksData.map((link) => ({
           href="https://nohello.net"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-gray-500 underline"
+          class="hover:text-gray-500 underline focus-visible:outline-1 focus-visible:outline-black rounded"
         >
           nohello.net
         </a>
@@ -85,10 +88,18 @@ const links = linksData.map((link) => ({
 </Layout>
 
 <script>
-  const quack = new Audio('/quack.mp3');
+  let quack: HTMLAudioElement | null = null;
+
+  try {
+    quack = new Audio('/quack.mp3');
+    quack.preload = 'none';
+  } catch (e) {
+    console.warn('Audio not supported or quack.mp3 missing:', e);
+  }
 
   document.getElementById('duck-btn')?.addEventListener('click', () => {
+    if (!quack) return;
     quack.currentTime = 0;
-    quack.play();
+    quack.play().catch(() => {});
   });
 </script>
