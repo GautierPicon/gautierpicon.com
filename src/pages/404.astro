@@ -20,12 +20,7 @@ const pageTitle = "Gautier Picon's Portfolio";
 </Layout>
 
 <script>
-  const originalPath = document.referrer
-    ? new URL(document.referrer).pathname
-    : window.location.pathname;
-
-  const displayPath =
-    originalPath === '/404/' || originalPath === '/404' ? '(unknown path)' : originalPath;
-
+  const path = window.location.pathname;
+  const displayPath = path === '/404' || path === '/404/' ? '(unknown path)' : path;
   document.getElementById('path-display')!.textContent = `Path: ${displayPath}`;
 </script>
