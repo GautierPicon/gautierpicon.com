@@ -3,6 +3,7 @@
   export let subtitle = '';
   export let href = '#';
   export let icon = '';
+  export let invertOnHover = false;
 </script>
 
 <a
@@ -21,7 +22,9 @@
           alt=""
           width="44"
           height="44"
-          class="w-full h-full object-contain"
+          class="w-full h-full object-contain transition-[filter] duration-150 {invertOnHover
+            ? 'group-hover:invert'
+            : ''}"
           loading="lazy"
           decoding="async"
         />
