@@ -16,5 +16,5 @@
 }
 
 @theme {
-  --font-sans: 'Funnel Sans', sans-serif;
+  --font-sans: 'Funnel Sans', ui-sans-serif, system-ui, sans-serif;
 }
