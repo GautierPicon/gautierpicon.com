@@ -9,7 +9,11 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description = "Gautier Picon's Portfolio", ogImage = '/opengraph.png' } = Astro.props;
+const {
+  title,
+  description = "Gautier Picon's Portfolio",
+  ogImage = '/opengraph.png'
+} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
@@ -55,7 +59,8 @@ const ogImageURL = new URL(ogImage, Astro.site);
     {description && <meta name="twitter:description" content={description} />}
     <meta name="twitter:image" content={ogImageURL} />
   </head>
-  <body class="m-0 p-0 w-full h-full overflow-hidden">
+  
+  <body class="m-0 p-0 w-full min-h-screen">
     <slot />
 
     <Analytics />
