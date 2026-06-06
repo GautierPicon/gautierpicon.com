@@ -9,14 +9,22 @@
   {href}
   target="_blank"
   rel="noopener noreferrer"
-  class="flex items-center justify-between w-full h-[54px] sm:h-[62px] md:h-[68px] px-4 bg-zinc-50 border border-zinc-200/60 rounded-full transition-all duration-200 hover:bg-[#111111] hover:border-[#111111] group"
+  class="flex items-center justify-between w-full h-[54px] sm:h-[62px] md:h-[68px] px-4 bg-zinc-50 border border-zinc-200/60 rounded-full transition-all duration-200 hover:bg-[#111111] hover:border-[#111111] active:scale-[0.98] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
 >
   <div class="flex items-center gap-3.5 grow min-w-0">
     {#if icon}
       <div
         class="rounded-xs shrink-0 w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[44px] md:h-[44px] overflow-hidden flex items-center justify-center p-0.5 group-hover:border-zinc-800 transition-colors"
       >
-        <img src={icon} alt="" class="w-full h-full object-contain" />
+        <img
+          src={icon}
+          alt=""
+          width="44"
+          height="44"
+          class="w-full h-full object-contain"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     {/if}
 
@@ -38,11 +46,12 @@
 
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="h-3.5 w-3.5 text-zinc-400 group-hover:text-white transition-colors duration-150 shrink-0 ml-2"
+    class="h-4 w-4 text-zinc-400 group-hover:text-white transition-colors duration-150 shrink-0 ml-2"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
     stroke-width="2.5"
+    aria-hidden="true"
   >
     <path
       stroke-linecap="round"
