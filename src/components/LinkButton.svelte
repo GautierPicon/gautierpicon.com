@@ -10,12 +10,12 @@
   {href}
   target="_blank"
   rel="noopener noreferrer"
-  class="flex items-center justify-between w-full h-[54px] sm:h-[62px] md:h-[68px] px-4 bg-zinc-50 border border-zinc-200/60 rounded-full transition-all duration-200 hover:bg-[#111111] hover:border-[#111111] active:scale-[0.98] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+  class="flex items-center justify-between w-full h-13.5 sm:h-15.5 md:h-17 px-4 bg-zinc-50 border border-zinc-200/60 rounded-full transition-all duration-200 hover:bg-[#111111] hover:border-[#111111] active:scale-[0.98] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
 >
   <div class="flex items-center gap-3.5 grow min-w-0">
     {#if icon}
       <div
-        class="rounded-xs shrink-0 w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[44px] md:h-[44px] overflow-hidden flex items-center justify-center p-0.5 group-hover:border-zinc-800 transition-colors"
+        class="rounded-xs shrink-0 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 overflow-hidden flex items-center justify-center p-0.5 group-hover:border-zinc-800 transition-colors"
       >
         <img
           src={icon}
