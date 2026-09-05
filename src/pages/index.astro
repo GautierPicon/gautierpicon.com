@@ -7,6 +7,7 @@ import { Image } from 'astro:assets';
 import LinkButton from '../components/LinkButton.svelte';
 import linksData from '../data/links.json';
 import walkingDuck from '../assets/walkingDuck.gif';
+import alpesStudioLogo from '../assets/alpesstudio.svg';
 
 const iconModules = import.meta.glob<{ default: ImageMetadata }>('../assets/linksIcons/*', {
   eager: true
@@ -52,7 +53,20 @@ const links = linksData.map((link) => ({
       <p
         class="font-normal text-[14px] sm:text-[16px] md:text-[20px] text-center text-black leading-tight max-w-65 sm:max-w-70 mb-6 sm:mb-10"
       >
-        Design Engineer
+        Design Engineer at
+        <a
+          href="https://alpes.studio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded"
+        >
+          <Image
+            src={alpesStudioLogo}
+            alt="Alpes Studio"
+            class="inline-block w-4 h-4 sm:w-5 sm:h-5"
+          />
+          <span class="text-[#00b898]">Alpes Studio</span>
+        </a>
       </p>
 
       <nav aria-label="Social links" class="w-full">
