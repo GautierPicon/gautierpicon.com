@@ -51,20 +51,17 @@ const links = linksData.map((link) => ({
       </h1>
 
       <p
-        class="font-normal text-[14px] sm:text-[16px] md:text-[20px] text-center text-black leading-tight max-w-65 sm:max-w-70 mb-6 sm:mb-10"
+        class="flex w-full items-center justify-center gap-x-1.5 gap-y-1 flex-wrap font-normal text-[14px] sm:text-[16px] md:text-[20px] text-center text-black leading-tight mb-6 sm:mb-10"
       >
-        Design Engineer at
+        <span class="whitespace-nowrap">Design Engineer at</span>
+
         <a
           href="https://alpes.studio"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded"
+          class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded"
         >
-          <Image
-            src={alpesStudioLogo}
-            alt="Alpes Studio"
-            class="inline-block w-4 h-4 sm:w-5 sm:h-5"
-          />
+          <Image src={alpesStudioLogo} alt="Alpes Studio" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
           <span class="text-[#00b898]">Alpes Studio</span>
         </a>
       </p>
